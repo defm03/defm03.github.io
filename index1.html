@@ -47,18 +47,30 @@
   #subete { position:absolute; left:50%; } 
   #hidari { position:relative; left:-50%; }
 
+  
   /*  main box  */
+  
   /*  top navigation  */
   #shouzou { float:left; width:700px; height:150px; background-color:#fff; border:1px solid #ddd; padding:5px; }
   #shouzou img { width:700px; height:150px; opacity:0.65; -webkit-filter:grayscale(0.1); }
+  #toppu   { position:absolute; top:-140px; }
+  #naviga  { text-align:center; margin-left:70%; margin-top:15%; width:200px; padding:12px; position:relative; z-index:9999; }
+  #typo    { margin-bottom:4px; color:#4D811C; width: 60px; background-color: #7AF900; padding: 4px; opacity: 0.6; font-size: 8px; 
+             text-transform: uppercase; letter-spacing:1px; -webkit-transition: opacity 0.3s linear; 
+             -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out;  
+             transition: all 0.3s ease-in-out; } /* buttons */
+  #typo:hover { opacity:1; }
+
   /*  content box  */
   #kokoro { width 700px; height:666px; padding:20px overflow:hidden; border: 1px solid #ddd; padding:5px; }
   /* left  */
   #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:127px; text-transform:lowercase;
             padding:0px 0px 2px 0px; border-bottom:1px dotted #aaa; } 
   /* right */      
-  #migi  { position:absolute; left:240px; top:5px; }
-  #saido { float:left; width:440px; }
+  #migi   { position:absolute; left:240px; top:5px; }
+  #jouhou { float:left; width:440px; text-align:justify; height:100px; padding:5px; line-height:15px; font-size:9px; }
+  #saido  { float:left; width:440px; }
+
 </style>
 </head>
 
@@ -70,6 +82,17 @@
 <!-- top navigation -->   
 <div id="shouzou">
     <img src="top_img.png">
+
+    <!-- navigation buttons -->
+    <div id="naviga">
+    <div id="toppu">
+        
+    <a href="https://github.com/defm03"><div id="typo">@github</div></a>
+    <a href="mailto:defm03@outlook.jp"><div id="typo">message</div></a>
+    <a href="http://www.lastfm.pl/user/chie-nyan"><div id="typo">.lastfm</div></a>
+
+    </div>
+    </div>
 </div>
 
 <!-- content box -->
