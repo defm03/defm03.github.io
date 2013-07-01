@@ -68,10 +68,10 @@
   /*  content box  */
   #kokoro { width 700px; height:666px; padding:20px overflow:hidden; border: 1px solid #ddd; padding:5px; }
   /* left  */
-  #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:150px; text-transform:lowercase;
+  #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:200px; text-transform:lowercase;
             padding:0px 0px 2px 0px; border-bottom:1px dotted #aaa; } 
-  #yotsuba{ text-align:center; font-family:dina; color:#aaa; font-size:10px; text-transform:none; padding:0px 20px 0px 20px; 
-            margin-top:3px; }      
+  #yotsuba{ text-align:center; font-family:dina; color:#aaa; font-size:12px; text-transform:none; padding:0px 20px 0px 20px; 
+            margin-top:10px; }      
   /* right */      
   #migi   { position:absolute; left:240px; top:5px; }
   #jouhou { float:left; width:440px; text-align:justify; height:100px; padding:5px; line-height:15px; font-size:9px; }
@@ -86,7 +86,8 @@
   .prompt  { font-family:dina; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
   .cmd     { font-family:dina; font-size:12px; color:#21B9D5; }
   .cmd:hover { color:#71CBDC; }
-  .help    { font-family:dina; font-size:12px; float:right; margin-right:12px; color:#aaa;}
+  .help    { font-family:dina; font-size:12px; float:right; margin-right:12px; color:#aaa; }
+  .txt     { font-family:dina; font-size:12px; color:#aaa; margin-left:0px; margin-right:12px; }
 
 </style>
 </head>
@@ -126,7 +127,11 @@
     <div id="okikaeru">
 
     <!-- left side -->
-    <div id="daimei">春</diiv>
+    <div id="daimei">春</div>
+    <div id="yotsuba"> 
+        これわマドスシエンヂスト~<br>
+        It's so cool.
+    </div>
 
     <!-- right side -->
     <div id="migi">
@@ -148,6 +153,12 @@
         <span class="prompt"> defm03 > </span> <span class="cmd"> favourite </span>
         <span class="help">:: few of my favourite things</span><br>
 
+        <span class="txt">
+            <br><center>date -u +%V$(uname)|sha256sum|sed 's/\W//g'<center><br>
+                    
+            君の気持ちは伝わるよ。変化を求めず、虚無と無慈悲な深淵の世界を好む。
+        </span>
+        
         <!-- std tap
         <span class="tap">  NAME:</span> <span style="float:right; margin-right:10px;">HARU - はる</span><br>
         <span class="tap">  AGE:</span> <span style="float:right; margin-right:10px;">15 - date:08.09</span><br>
@@ -156,6 +167,11 @@
         <span class="tap">  STATUS:</span> <span style="float:right; margin-right:10px;">NO WAIFU</span>
         -->
 
+    </div>
+    </div>
+    </div>
+
+    <!-- e:proper placement -->
     </div>
     </div>
     </div>
