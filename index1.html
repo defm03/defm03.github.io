@@ -42,6 +42,7 @@
   a    { text-decoration: none; color:#787878; }
   ul   { list-style:square; margin-left:-10px;  }
   blockquote { background-color:#f7f7f7; padding: 5px margin-left:10px; margin-right:10px; }
+  .tap { margin-left:0px; margin-right:1px; color:#FF8055; border-left: solid 8px; letter-spacing:1px; font-size:9px; }
 
   /*           Center the page           */
   #subete { position:absolute; left:50%; } 
@@ -55,8 +56,8 @@
   #shouzou img { width:700px; height:150px; opacity:0.65; -webkit-filter:grayscale(0.1); }
   #toppu   { position:absolute; top:-140px; }
   #navigaa { text-align:center; margin-left:32.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
-  #navigab { text-align:center; margin-left:42.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999;  }
-  #navigac { text-align:center; margin-left:52.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999;  }
+  #navigab { text-align:center; margin-left:42.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
+  #navigac { text-align:center; margin-left:52.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
 
   #typo    { margin-bottom:4px; color:#4D811C; width: 60px; background-color: #7AF900; padding: 4px; opacity: 0.6; font-size: 8px; 
              text-transform: uppercase; letter-spacing:1px; -webkit-transition: opacity 0.3s linear; 
@@ -67,12 +68,25 @@
   /*  content box  */
   #kokoro { width 700px; height:666px; padding:20px overflow:hidden; border: 1px solid #ddd; padding:5px; }
   /* left  */
-  #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:127px; text-transform:lowercase;
+  #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:150px; text-transform:lowercase;
             padding:0px 0px 2px 0px; border-bottom:1px dotted #aaa; } 
+  #yotsuba{ text-align:center; font-family:dina; color:#aaa; font-size:10px; text-transform:none; padding:0px 20px 0px 20px; 
+            margin-top:3px; }      
   /* right */      
   #migi   { position:absolute; left:240px; top:5px; }
   #jouhou { float:left; width:440px; text-align:justify; height:100px; padding:5px; line-height:15px; font-size:9px; }
   #saido  { float:left; width:440px; }
+
+  /*  proper placement  */ 
+  #karada  { float:left; width:180px; }
+  #atama   { width:180px; height:100px; padding:5px; position:relative; }
+  #okikaeru{ position:absolute; left:17px; }
+
+  /*  text  */
+  .prompt  { font-family:dina; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
+  .cmd     { font-family:dina; font-size:12px; color:#21B9D5; }
+  .cmd:hover { color:#71CBDC; }
+  .help    { font-family:dina; font-size:12px; float:right; margin-right:12px; color:#aaa;}
 
 </style>
 </head>
@@ -106,10 +120,45 @@
 
 <!-- content box -->
 <div id="kokoro">    
-    
+    <!-- s:proper placement -->
+    <div id="karada">
+    <div id="atama">
+    <div id="okikaeru">
+
     <!-- left side -->
     <div id="daimei">春</diiv>
 
+    <!-- right side -->
+    <div id="migi">
+    <div id="jouhou">
+    <div id="saido">
+        
+        <span class="prompt"> defm03 > </span> <span class="cmd"> about </span>
+        <span class="help">:: basic info about me</span><br> 
+        
+        <span class="prompt"> defm03 > </span> <span class="cmd"> projects </span>
+        <span class="help">:: my finished and ongoing pojects</span><br>
+        
+        <span class="prompt"> defm03 > </span> <span class="cmd"> documents </span>
+        <span class="help">:: charts, project documentations etc.</span><br>
+        
+        <span class="prompt"> defm03 > </span> <span class="cmd"> pictures </span>
+        <span class="help">:: my works and/or collections</span><br>
+
+        <span class="prompt"> defm03 > </span> <span class="cmd"> favourite </span>
+        <span class="help">:: few of my favourite things</span><br>
+
+        <!-- std tap
+        <span class="tap">  NAME:</span> <span style="float:right; margin-right:10px;">HARU - はる</span><br>
+        <span class="tap">  AGE:</span> <span style="float:right; margin-right:10px;">15 - date:08.09</span><br>
+        <span class="tap">  RESIDENCE:</span> <span style="float:right; margin-right:10px;">INTERWEBS - Cracow, Poland</span><br>
+        <span class="tap">  OCCUPATION:</span> <span style="float:right; margin-right:10px;">NONE</span><br>
+        <span class="tap">  STATUS:</span> <span style="float:right; margin-right:10px;">NO WAIFU</span>
+        -->
+
+    </div>
+    </div>
+    </div>
 </div>
 
 <!-- e:center -->
