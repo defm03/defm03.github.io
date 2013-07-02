@@ -39,7 +39,7 @@
          background-attachment:fixed repeat; }
   
   /*  basic variables  */      
-  a    { text-decoration: none; color:#787878; }
+  a    { text-decoration:none; color:#787878; }
   ul   { list-style:square; margin-left:-10px;  }
   blockquote { background-color:#f7f7f7; padding: 5px margin-left:10px; margin-right:10px; }
   .tap { margin-left:0px; margin-right:1px; color:#FF8055; border-left: solid 8px; letter-spacing:1px; font-size:9px; }
@@ -70,8 +70,8 @@
   /* left  */
   #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:200px; text-transform:lowercase;
             padding:0px 0px 2px 0px; border-bottom:1px dotted #aaa; } 
-  #yotsuba{ text-align:center; font-family:dina; color:#aaa; font-size:12px; text-transform:none; padding:0px 20px 0px 20px; 
-            margin-top:10px; }      
+  #yotsuba{ text-align:center; font-family:dina,DotumChe; color:#aaa; font-size:12px; text-transform:none; 
+            padding:0px 20px 0px 20px; margin-top:10px; }      
   /* right */      
   #migi   { position:absolute; left:240px; top:5px; }
   #jouhou { float:left; width:440px; text-align:justify; height:100px; padding:5px; line-height:15px; font-size:9px; }
@@ -83,11 +83,19 @@
   #okikaeru{ position:absolute; left:17px; }
 
   /*  text  */
-  .prompt  { font-family:dina; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
-  .cmd     { font-family:dina; font-size:12px; color:#21B9D5; }
+  #cbipr   { position:relative; margin-right:12px; margin-left:12px; }
+  #blgupd  { position:absolute; margin-right:12px; margin-left:4px; }
+
+  .prompt  { font-family:dina,DotumChe; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
+  .cmd     { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
   .cmd:hover { color:#71CBDC; }
-  .help    { font-family:dina; font-size:12px; float:right; margin-right:12px; color:#aaa; }
-  .txt     { font-family:dina; font-size:12px; color:#aaa; margin-left:0px; margin-right:12px; }
+  .help    { font-family:dina,DotumChe; font-size:12px; float:right; margin-right:12px; color:#aaa; }
+  .txt     { font-family:dina,DotumChe; font-size:12px; color:#aaa; margin-right:12px; margin-left:12px; }
+
+  .update  { font-family:dina,DotumChe; font-size:16px; position:absolute; margin-left:25px; color:#FF8055; }
+  .status  { font-family:dina,DotumChe; font-size:12px; color:#FF8055; }
+  .date    { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
+  .comment { font-family:dina,DotumChe; font-size:12px; color:#aaa; float:right; }
 
 </style>
 </head>
@@ -99,7 +107,7 @@
 
 <!-- top navigation -->   
 <div id="shouzou">
-    <img src="top_img.png">
+    <img src="images/top_img.png">
 
     <!-- navigation buttons -->
     <div id="navigaa">
@@ -153,15 +161,59 @@
         <span class="prompt"> defm03 > </span> <span class="cmd"> favourite </span>
         <span class="help">:: few of my favourite things</span><br>
 
+        <!-- short about ver -->
+        <div id="cbipr">
         <span class="txt">
-            <br><center>date -u +%V$(uname)|sha256sum|sed 's/\W//g'<center><br>
+            <br><center>date -u +%V$(uname)|sha256sum|sed 's/\W//g'</center><br>
                     
-            君の気持ちは伝わるよ。変化を求めず、虚無と無慈悲な深淵の世界を好む。<br><br>
+            <center>君の気持ちは伝わるよ。変化を求めず、虚無と無慈悲な深淵の世界を好む。<br><br>
             
             Newbie programmer and web designer. In free time I use to read books, and draw. 
-            You might call me an otaku. -Lurking 4chan.
-        </span>
-        
+            You might call me an otaku. -Lurking 4chan.</center>
+        </span><br>
+
+        <!-- updates - feed - archive -->
+        <span class="update"><br>[<span class="cmd">λ</span>] ᗧ -Syy: </span>
+        <div id="blgupd">
+            <br><br><br>
+            <span class="status">[*]</span><span class="date">2013-07-02</span>
+            <span class="comment">:: defm03.github.io portfolio ver. 2.0</span>
+
+            <span class="status">[~]</span><span class="date">2013-07-01</span>
+            <span class="comment">:: defm03.github.io -rebuild of site to 2.0</span>
+
+            <span class="status">[~]</span><span class="date">2013-07-01</span>
+            <span class="comment">:: anime summer 2013 season -chart in 
+            r:<a href="https://github.com/defm03/.doc/blob/master/docs/Summer-2013-Anime.Chart-1.0.ods">doc</a></span>
+
+            <span class="status">[~]</span><span class="date">2013-06-30</span>
+            <span class="comment">:: back to dwarf fortress -losing is fun!</span>
+
+            <span class="status">[~]</span><span class="date">2013-06-25</span>
+            <span class="comment">:: arch linux fresh install -2nd time using</span>
+
+            <span class="status">[~]</span><span class="date">2013-06-22</span>
+            <span class="comment">:: plying around openRA; learning c#</span>
+
+            <span class="status">[~]</span><span class="date">2013-05-29</span>
+            <span class="comment">:: okami-shoki:started working at ecosys</span>
+
+            <span class="status">[!]</span><span class="date">2013-05-02</span>
+            <span class="comment">:: evangelion 3.0:translation finished</span>
+
+            <span class="status">[~]</span><span class="date">2013-04-03</span>
+            <span class="comment">:: chemistry-cc proto. with theory -dn -v1</span>
+
+            <span class="status">[~]</span><span class="date">2013-03-28</span>
+            <span class="comment">:: chemistry-cc projcect initialize -a -v0</span>
+
+            <!-- archive -->
+            <span class="status">[a]</span><span class="prompt">defm03 > </span>
+            <span class="cmd">archive</span>
+        </div>
+    
+        </div>
+
         <!-- std tap
         <span class="tap">  NAME:</span> <span style="float:right; margin-right:10px;">HARU - はる</span><br>
         <span class="tap">  AGE:</span> <span style="float:right; margin-right:10px;">15 - date:08.09</span><br>
