@@ -42,7 +42,7 @@
   a    { text-decoration:none; color:#787878; }
   ul   { list-style:square; margin-left:-10px;  }
   blockquote { background-color:#f7f7f7; padding: 5px margin-left:10px; margin-right:10px; }
-  .tap { color:#FF8055; }
+  .tap { color:#FF8055; float:left; }
 
   /*           Center the page           */
   #subete { position:absolute; left:50%; } 
@@ -88,7 +88,8 @@
 
   /*  text  */
   #cbipr   { position:relative; margin-right:12px; margin-left:12px; }
-  #blgupd  { position:absolute; margin-right:12px; margin-left:4px; }
+  #blgupd  { position:relative; margin-right:12px; margin-left:4px; }
+  #abtfrc  { position:absolute; width:170px; height:300px; }
 
   .prompt  { font-family:dina,DotumChe; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
   .cmd     { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
@@ -96,10 +97,10 @@
   .help    { font-family:dina,DotumChe; font-size:12px; float:right; margin-right:12px; color:#aaa; }
   .txt     { font-family:dina,DotumChe; font-size:12px; color:#aaa; margin-right:12px; margin-left:12px; }
 
-  .update  { font-family:dina,DotumChe; font-size:14px; position:absolute; margin-left:25px; color:#FF8055; }
+  .update  { font-family:dina,DotumChe; font-size:15px; position:absolute; margin-left:25px; color:#FF8055; }
   .status  { font-family:dina,DotumChe; font-size:12px; color:#FF8055; }
   .date    { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
-  .comment { font-family:dina,DotumChe; font-size:12px; color:#aaa; float:right; }
+  .comment { font-family:dina,DotumChe; font-size:12px; color:#aaa; }
 
 </style>
 </head>
@@ -141,12 +142,14 @@
     <!-- left side -->
     <div id="daimei"><img src="images/mai_img.png"/></div>
     <div id="yotsuba"> 
-        <span class="tap">name:</span>          <span style="float:right;">haru - はる</span><br>
+        <div id="abtfrc">
+        <span class="tap">name:</span>          <span style="float:right;">はる</span><br>
         <span class="tap">age:</span>           <span style="float:right;">15</span><br>
         <span class="tap">residence:</span>     <span style="float:right;">interwebs</span><br>
         <span class="tap">occupation:</span>    <span style="float:right;">none</span><br>
-        <span class="tap">status:</span>        <span style="float:right;">lain♥</span>
-        
+        <span class="tap">status:</span>        <span style="float:right;">frai</span><br>
+        <span class="tap">waifu:</span>         <span style="float:right;">lain</span>
+        </div>
     </div>
 
     <!-- right side -->
@@ -173,19 +176,36 @@
         <span class="update"><br>[<span class="cmd">λ</span>] uname -a: </span>
         <div id="blgupd">
             <br><br>
-            <span class="status">[*]</span><span class="date">GNU/Linux i686 </span>
+            <span class="status">[!]</span><span class="date">GNU/Linux i686 </span>
             <span class="comment"> :: 3.9.7-1-<a href="https://www.archlinux.org/">ARCH</a> #1 SMP</span>
+        </div>
+        <span class="update"><br>[<span class="cmd">λ</span>] ᗧ -Q > ᗣ.txt: </span>
+        <div id="blgupd">
+            <br><br>
+            <span class="status">[*]</span><span class="date">awesome </span>
+            <span class="comment"> :: awesome window manager </span>
+            <br> 
+            <span class="status">[*]</span><span class="date">irssi </span>
+            <span class="comment"> :: an IRC client program for Linux </span>
+            <br>
+            <span class="status">[*]</span><span class="date">mpd </span>
+            <span class="comment"> :: (<b>m</b>usic <b>p</b>layer <b>d</b>aemon) an audio player </span>
+            <br>
+            <span class="status">[*]</span><span class="date">ncmpcpp </span>
+            <span class="comment"> :: an mpd client with a UI </span>
+            <br>
+            <span class="status">[*]</span><span class="date">zsnes </span>
+            <span class="comment"> :: highly compatible super nintendo emulator </span>
+            <br>
+            <span class="status">[*]</span><span class="date">pcsx2 </span>
+            <span class="comment"> :: a sony playstation 2 emulator 
+            (<a href="https://aur.archlinux.org/packages/pcsx2-svn/">aur</a>) </span>
+            <br>
+            <span class="status">[*]</span><span class="date">dwarffortress </span>
+            <span class="comment"> :: single-player dwarfs simulator </span>
         </div>
     
         </div>
-
-        <!-- std tap
-        <span class="tap">  NAME:</span> <span style="float:right; margin-right:10px;">HARU - はる</span><br>
-        <span class="tap">  AGE:</span> <span style="float:right; margin-right:10px;">15 - date:08.09</span><br>
-        <span class="tap">  RESIDENCE:</span> <span style="float:right; margin-right:10px;">INTERWEBS - Cracow, Poland</span><br>
-        <span class="tap">  OCCUPATION:</span> <span style="float:right; margin-right:10px;">NONE</span><br>
-        <span class="tap">  STATUS:</span> <span style="float:right; margin-right:10px;">NO WAIFU</span>
-        -->
 
     </div>
     </div>
