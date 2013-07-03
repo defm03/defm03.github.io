@@ -42,7 +42,7 @@
   a    { text-decoration:none; color:#787878; }
   ul   { list-style:square; margin-left:-10px;  }
   blockquote { background-color:#f7f7f7; padding: 5px margin-left:10px; margin-right:10px; }
-  .tap { margin-left:0px; margin-right:1px; color:#FF8055; border-left: solid 8px; letter-spacing:1px; font-size:9px; }
+  .tap { color:#FF8055; float:left; }
 
   /*           Center the page           */
   #subete { position:absolute; left:50%; } 
@@ -70,21 +70,26 @@
   /* left  */
   #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:200px; text-transform:lowercase;
             padding:0px 0px 2px 0px; border-bottom:1px dotted #aaa; } 
-  #yotsuba{ text-align:center; font-family:dina,DotumChe; color:#aaa; font-size:12px; text-transform:none; 
-            padding:0px 20px 0px 20px; margin-top:10px; }      
+  #yotsuba{ float:left; position:absolute; font-family:dina,DotumChe; color:#aaa; font-size:12px; text-transform:none; 
+            padding:0px 15px 5px 15px; margin-top:10px; }      
+  #daimei img { border:5px solid color:#aaa; width:200px; height:200px; opacity:0.2666; -webkit-filter:grayscale(0.4); 
+                -webkit-transition:opacity 0.3s linear; -webkit-transition:all 0.3s ease-in-out; 
+                -moz-transition:all 0.3s ease-in-out; -o-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out; }
+  #daimei img:hover { opacity:0.8666; }  
   /* right */      
   #migi   { position:absolute; left:240px; top:5px; }
   #jouhou { float:left; width:440px; text-align:justify; height:100px; padding:5px; line-height:15px; font-size:9px; }
   #saido  { float:left; width:440px; }
 
   /*  proper placement  */ 
-  #karada  { float:left; width:180px; }
-  #atama   { width:180px; height:100px; padding:5px; position:relative; }
+  #karada  { float:left; width:300px; }
+  #atama   { width:300px; height:300px; padding:5px; position:absolute; }
   #okikaeru{ position:absolute; left:17px; }
 
   /*  text  */
   #cbipr   { position:relative; margin-right:12px; margin-left:12px; }
-  #blgupd  { position:absolute; margin-right:12px; margin-left:4px; }
+  #blgupd  { position:relative; margin-right:12px; margin-left:4px; }
+  #abtfrc  { position:absolute; width:170px; height:300px; }
 
   .prompt  { font-family:dina,DotumChe; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
   .cmd     { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
@@ -92,10 +97,10 @@
   .help    { font-family:dina,DotumChe; font-size:12px; float:right; margin-right:12px; color:#aaa; }
   .txt     { font-family:dina,DotumChe; font-size:12px; color:#aaa; margin-right:12px; margin-left:12px; }
 
-  .update  { font-family:dina,DotumChe; font-size:16px; position:absolute; margin-left:25px; color:#FF8055; }
+  .update  { font-family:dina,DotumChe; font-size:15px; position:absolute; margin-left:25px; color:#FF8055; }
   .status  { font-family:dina,DotumChe; font-size:12px; color:#FF8055; }
   .date    { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
-  .comment { font-family:dina,DotumChe; font-size:12px; color:#aaa; float:right; }
+  .comment { font-family:dina,DotumChe; font-size:12px; color:#aaa; }
 
 </style>
 </head>
@@ -135,10 +140,16 @@
     <div id="okikaeru">
 
     <!-- left side -->
-    <div id="daimei">春</div>
+    <div id="daimei"><img src="images/mai_img.png"/></div>
     <div id="yotsuba"> 
-        これわマドスシエンヂスト~<br>
-        It's so cool.
+        <div id="abtfrc">
+        <span class="tap">name:</span>          <span style="float:right;">はる</span><br>
+        <span class="tap">age:</span>           <span style="float:right;">15</span><br>
+        <span class="tap">residence:</span>     <span style="float:right;">interwebs</span><br>
+        <span class="tap">occupation:</span>    <span style="float:right;">none</span><br>
+        <span class="tap">status:</span>        <span style="float:right;">frai</span><br>
+        <span class="tap">waifu:</span>         <span style="float:right;">lain</span>
+        </div>
     </div>
 
     <!-- right side -->
@@ -147,83 +158,67 @@
     <div id="saido">
         
         <span class="prompt"> defm03 > </span> 
-        <a href="about.html"> <span class="cmd"> about </span> </a>
-        <span class="help">:: basic info about me</span><br> 
-        
-        <span class="prompt"> defm03 > </span> 
-        <a href="projects.html"><span class="cmd"> projects </span></a>
-        <span class="help">:: my finished and ongoing pojects</span><br>
-        
-        <span class="prompt"> defm03 > </span> 
-        <a href="documents.html"><span class="cmd"> documents </span></a>
-        <span class="help">:: charts, project documentations etc.</span><br>
-        
-        <span class="prompt"> defm03 > </span> <span class="cmd"> pictures </span>
-        <span class="help">:: my works and/or collections</span><br>
+        <a href="index.html"><span class="cmd"> index </span></a>
+        <span class="help">:: back to front page - page index</span><br> 
 
-        <span class="prompt"> defm03 > </span> <span class="cmd"> favourite </span>
-        <span class="help">:: few of my favourite things</span><br>
-
-        <!-- short about ver -->
+        <!-- right content -->
         <div id="cbipr">
-        <span class="txt">
-            <br><center>date -u +%V$(uname)|sha256sum|sed 's/\W//g'</center><br>
-                    
-            <center>君の気持ちは伝わるよ。変化を求めず、虚無と無慈悲な深淵の世界を好む。<br><br>
-            
-            Newbie programmer and web designer. In free time I use to read books, and draw. 
-            You might call me an otaku. -Lurking 4chan.</center>
-        </span><br>
-
+                        
         <!-- updates - feed - archive -->
-        <span class="update"><br>[<span class="cmd">λ</span>] ᗧ -Syy: </span>
+        <span class="update"><br>[<span class="cmd">λ</span>] uname -a: </span>
         <div id="blgupd">
-            <br><br><br>
-            <span class="status">[*]</span><span class="date">2013-07-02</span>
-            <span class="comment">:: defm03.github.io portfolio ver. 2.0</span>
-
-            <span class="status">[~]</span><span class="date">2013-07-01</span>
-            <span class="comment">:: defm03.github.io -rebuild of site to 2.0</span>
-
-            <span class="status">[~]</span><span class="date">2013-07-01</span>
-            <span class="comment">:: anime summer 2013 season -chart in 
-            r:<a href="https://github.com/defm03/.doc/blob/master/docs/Summer-2013-Anime.Chart-1.0.ods">doc</a></span>
-
+            <br><br>
+            <span class="status">[!]</span><span class="date">GNU/Linux i686 </span>
+            <span class="comment"> :: 3.9.7-1-<a href="https://www.archlinux.org/">ARCH</a> #1 SMP</span>
+        </div>
+        <span class="update"><br>[<span class="cmd">λ</span>] ᗧ -Q > ᗣ.txt: </span>
+        <div id="blgupd">
+            <br><br>
+            <span class="status">[*]</span><span class="date">awesome </span>
+            <span class="comment"> :: awesome window manager </span>
+            <br> 
+            <span class="status">[*]</span><span class="date">irssi </span>
+            <span class="comment"> :: an IRC client program for Linux </span>
+            <br>
+            <span class="status">[*]</span><span class="date">mpd </span>
+            <span class="comment"> :: (<b>m</b>usic <b>p</b>layer <b>d</b>aemon) an audio player </span>
+            <br>
+            <span class="status">[*]</span><span class="date">mpdas </span>
+            <span class="comment"> :: an audioscrobbler client for mpd </span>
+            <br>
+            <span class="status">[*]</span><span class="date">ncmpcpp </span>
+            <span class="comment"> :: an mpd client with a UI </span>
+            <br>
+            <span class="status">[*]</span><span class="date">vim </span>
+            <span class="comment"> :: text editor written by bram moolenaar </span>
+            <br>
+            <span class="status">[*]</span><span class="date">zsnes </span>
+            <span class="comment"> :: highly compatible super nintendo emulator </span>
+            <br>
+            <span class="status">[*]</span><span class="date">pcsx2 </span>
+            <span class="comment"> :: a sony playstation 2 emulator 
+            (<a href="https://aur.archlinux.org/packages/pcsx2-svn/">aur</a>) </span>
+            <br>
+            <span class="status">[*]</span><span class="date">dwarffortress </span>
+            <span class="comment"> :: single-player dwarfs simulator </span>
+        </div>
+        <span class="update"><br>[<span class="cmd">λ</span>] scrot: </span>
+        <div id="blgupd">
+            <br><br>
             <span class="status">[~]</span><span class="date">2013-06-30</span>
-            <span class="comment">:: back to dwarf fortress -losing is fun!</span>
-
-            <span class="status">[~]</span><span class="date">2013-06-25</span>
-            <span class="comment">:: arch linux fresh install -2nd time using</span>
-
-            <span class="status">[~]</span><span class="date">2013-06-22</span>
-            <span class="comment">:: plying around openRA; learning c#</span>
-
-            <span class="status">[~]</span><span class="date">2013-05-29</span>
-            <span class="comment">:: okami-shoki:started working at ecosys</span>
-
-            <span class="status">[!]</span><span class="date">2013-05-02</span>
-            <span class="comment">:: evangelion 3.0:translation finished</span>
-
-            <span class="status">[~]</span><span class="date">2013-04-03</span>
-            <span class="comment">:: chemistry-cc proto. with theory -dn -v1</span>
-
-            <span class="status">[~]</span><span class="date">2013-03-28</span>
-            <span class="comment">:: chemistry-cc projcect initialize -a -v0</span>
-
-            <!-- archive -->
-            <span class="status">[a]</span><span class="prompt">defm03 > </span>
-            <span class="cmd">archive</span>
-        </div>
-    
+            <span class="comment"> :: df,ncmpcpp,irssi,firefox->4chan 
+            <a href="images/2013-06-30-170355_3200x1080_scrot.png">:img</a></span>
+            <br>
+            <span class="status">[~]</span><span class="date">2013-06-27</span>
+            <span class="comment"> :: vim,irssi,ncmpcpp,screenfetch        
+            <a href="images/2013-06-27-190912_3200x1080_scrot.png">:img</a></span>
+            <br>
+            <span class="status">[~]</span><span class="date">2013-05-24</span>
+            <span class="comment"> :: debian--vim,iceweasel,tint2,conky
+            <a href="images/screenFetch-2013-05-24_20-10-32.png">:img</a></span>
         </div>
 
-        <!-- std tap
-        <span class="tap">  NAME:</span> <span style="float:right; margin-right:10px;">HARU - はる</span><br>
-        <span class="tap">  AGE:</span> <span style="float:right; margin-right:10px;">15 - date:08.09</span><br>
-        <span class="tap">  RESIDENCE:</span> <span style="float:right; margin-right:10px;">INTERWEBS - Cracow, Poland</span><br>
-        <span class="tap">  OCCUPATION:</span> <span style="float:right; margin-right:10px;">NONE</span><br>
-        <span class="tap">  STATUS:</span> <span style="float:right; margin-right:10px;">NO WAIFU</span>
-        -->
+        </div>
 
     </div>
     </div>
