@@ -53,7 +53,7 @@
   
   /*  top navigation  */
   #shouzou { float:left; width:700px; height:150px; background-color:#fff; border:1px solid #ddd; padding:5px; }
-  #shouzou img { width:700px; height:150px; opacity:0.65; -webkit-filter:grayscale(0.1); }
+  #shouzou img { width:700px; height:150px; opacity:0.75; -webkit-filter:grayscale(0.1); }
   #toppu   { position:absolute; top:-140px; }
   #navigaa { text-align:center; margin-left:32.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
   #navigab { text-align:center; margin-left:42.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
@@ -90,6 +90,10 @@
   #cbipr   { position:relative; margin-right:12px; margin-left:12px; }
   #blgupd  { position:relative; margin-right:12px; margin-left:4px; }
   #abtfrc  { position:absolute; width:170px; height:300px; }
+  #imgrgh  { position:absolute; left:730px; top:5px }
+  #imgrgh img{ width:240px; opacity:0.8; }
+  #imglft  { position:absolute; right:730px; top:5px  }
+  #imglft img{ width:240px; opacity:0.8; }
 
   .prompt  { font-family:dina,DotumChe; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
   .cmd     { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
@@ -132,8 +136,20 @@
     </div>
 </div>
 
+<!--img right-->
+<div id="imgrgh">
+    <img src="images/right.jpg">
+</div>
+<!--img left-->
+<div id="imglft">
+    <img src="images/left.jpg">
+    <img src="images/lefa.jpg">
+</div>
+
+
 <!-- content box -->
 <div id="kokoro">    
+    
     <!-- s:proper placement -->
     <div id="karada">
     <div id="atama">
@@ -172,20 +188,37 @@
         <span class="update"><br>[<span class="cmd">ᗣ</span>] fav tags: </span>
         <div id="blgupd">
             <br><br>
-            <span class="status">[*]</span><span class="date">awesome </span>
-            <span class="comment"> :: awesome window manager </span>
+            <span class="status">[?]</span><span class="date">iwakura_lain </span>
+            <span class="comment"> :: 
+                [<a href="http://danbooru.donmai.us/posts?utf8=%E2%9C%93&tags=iwakura_lain&commit=Go">d</a>]
+                [<a href="https://yande.re/post?tags=iwakura_lain">y</a>]
+                [<a href="http://konachan.net/post?tags=iwakura_lain">k</a>] 
+                [<a href="http://www.tumblr.com/tagged/iwakura+lain">t</a>]
+                --my waifu</span>
             <br> 
-            <span class="status">[*]</span><span class="date">irssi </span>
-            <span class="comment"> :: an IRC client program for Linux </span>
+            <span class="status">[?]</span><span class="date">ghibli </span>
+            <span class="comment"> :: 
+                [<a href="http://danbooru.donmai.us/posts?utf8=%E2%9C%93&tags=ghibli&commit=Go">d</a>]
+                [<a href="https://yande.re/post?tags=studio_ghibli">y</a>]
+                [<a href="http://konachan.net/post?tags=ghibli">k</a>]
+                [<a href="http://www.tumblr.com/tagged/ghibli">t</a>]
+                --mai love of nature </span>
             <br>
-            <span class="status">[*]</span><span class="date">mpd </span>
-            <span class="comment"> :: (<b>m</b>usic <b>p</b>layer <b>d</b>aemon) an audio player </span>
+            <span class="status">[?]</span><span class="date">ayanami_rei </span>
+            <span class="comment"> :: 
+                [<a href="http://danbooru.donmai.us/posts?utf8=%E2%9C%93&tags=ayanami_rei&commit=Go">d</a>]
+                [<a href="https://yande.re/post?tags=ayanami_rei">y</a>]
+                [<a href="http://konachan.net/post?tags=ayanami_rei">k</a>]
+                [<a href="http://www.tumblr.com/tagged/ayanami+rei">t</a>]
+                --evangerion-1</span>
             <br>
-            <span class="status">[*]</span><span class="date">mpdas </span>
-            <span class="comment"> :: an audioscrobbler client for mpd </span>
-            <br>
-            <span class="status">[*]</span><span class="date">ncmpcpp </span>
-            <span class="comment"> :: an mpd client with a UI </span>
+            <span class="status">[*]</span><span class="date">nagisa_kaworu </span>
+            <span class="comment"> :: 
+                [<a href="http://danbooru.donmai.us/posts?utf8=%E2%9C%93&tags=nagisa_kaworu+&commit=Go">d</a>]
+                [<a href="https://yande.re/post?tags=nagisa_kaworu">y</a>]
+                [<a href="http://konachan.net/post?tags=nagisa_kaworu">k</a>]
+                [<a href="http://www.tumblr.com/tagged/nagisa+kaworu">t</a>]
+                --evangerion-2</span>
             <br>
             <span class="status">[*]</span><span class="date">vim </span>
             <span class="comment"> :: text editor written by bram moolenaar </span>
