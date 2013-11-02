@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+<!--
+ 
+   This program is free software; you can redistribute it and
+   /or modify it under the terms of the GNU General Public L-
+   icense as published by the Free Software Foundation; eith-
+   er version 2 of the License, or (at your option) any late-
+   r version.                           Copyright 2013 defm03
+               __,__
+              /     \
+              vvvvvvv  /|__/|
+                 I   /O,O   |
+                 I /_____   |      /|/|
+                J|/^ ^ ^ \  |    /00  |    _//|
+                 |^ ^ ^ ^ |W|   |/^^\ |   /oo |
+                  \m___m__|_|    \m_m_|   \mm_|
+ 
+ 
+    NERV HQ :: defm03 // github@defm03 // defm03@outlook.jp
+ 
+-->
+
+
+<head>
+  <!-- basic info -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>λ.はる</title>
+  <link rel="shortcut icon" href="favicon.gif">
+  <link rel="alternate" type="application/rss+xml" href="https://github.com/defm03.atom">
+
+<style type="text/css">
+  ::selection { background:#ddd; color:#fff; }
+  ::-moz-selection { background:#ddd; color:#fff; }
+  ::-webkit-selection { background:#ddd; color:#fff; }
+  
+  body { color:#aaa; text-align:justify; font-family:tahoma; font-size:10px; background-color:#fff; background-image:url('.jpg');
+         background-attachment:fixed repeat; }
+  
+  /*  basic variables  */      
+  a    { text-decoration:none; color:#787878; }
+  ul   { list-style:square; margin-left:-10px;  }
+  blockquote { background-color:#f7f7f7; padding: 5px margin-left:10px; margin-right:10px; }
+  .tap { color:#FF8055; float:left; }
+
+  /*           Center the page           */
+  #subete { position:absolute; left:50%; } 
+  #hidari { position:relative; left:-50%; }
+
+  
+  /*  main box  */
+  
+  /*  top navigation  */
+  #shouzou { float:left; width:700px; height:150px; background-color:#fff; border:1px solid #ddd; padding:5px; }
+  #shouzou img { width:700px; height:150px; opacity:0.65; -webkit-filter:grayscale(0.1); }
+  #toppu   { position:absolute; top:-140px; }
+  #navigaa { text-align:center; margin-left:32.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
+  #navigab { text-align:center; margin-left:42.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
+  #navigac { text-align:center; margin-left:52.5%; margin-top:16%; width:900px; padding:12px; position:absolute; z-index:9999; }
+
+  #typo    { margin-bottom:4px; color:#4D811C; width: 60px; background-color: #7AF900; padding: 4px; opacity: 0.6; font-size: 8px; 
+             text-transform: uppercase; letter-spacing:1px; -webkit-transition: opacity 0.3s linear; 
+             -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out;  
+             transition: all 0.3s ease-in-out; } /* buttons */
+  #typo:hover { opacity:1; }
+
+  /*  content box  */
+  #kokoro { width 700px; height:645px; padding:20px overflow:hidden; border: 1px solid #ddd; padding:5px; }
+  /* left  */
+  #daimei { text-align:center; font-family:georgia; color:#21B9D5; font-size:200px; text-transform:lowercase;
+            padding:0px 0px 2px 0px; border-bottom:1px dotted #aaa; } 
+  #yotsuba{ float:left; position:absolute; font-family:dina,DotumChe; color:#aaa; font-size:12px; text-transform:none; 
+            padding:0px 15px 5px 15px; margin-top:10px; }      
+  #daimei img { border:5px solid color:#aaa; width:200px; height:200px; opacity:0.2666; -webkit-filter:grayscale(0.4); 
+                -webkit-transition:opacity 0.3s linear; -webkit-transition:all 0.3s ease-in-out; 
+                -moz-transition:all 0.3s ease-in-out; -o-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out; }
+  #daimei img:hover { opacity:0.8666; }  
+  /* right */      
+  #migi   { position:absolute; left:240px; top:5px; }
+  #jouhou { float:left; width:440px; text-align:justify; height:100px; padding:5px; line-height:15px; font-size:9px; }
+  #saido  { float:left; width:440px; }
+
+  /*  proper placement  */ 
+  #karada  { float:left; width:300px; }
+  #atama   { width:300px; height:300px; padding:5px; position:absolute; }
+  #okikaeru{ position:absolute; left:17px; }
+
+  /*  text  */
+  #cbipr   { position:relative; margin-right:12px; margin-left:12px; }
+  #blgupd  { position:relative; margin-right:12px; margin-left:4px; }
+  #abtfrc  { position:absolute; width:170px; height:300px; }
+
+  .prompt  { font-family:dina,DotumChe; font-size:12px; margin-left:0px; margin-right:1px; color:#FF8055; }
+  .cmd     { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
+  .cmd:hover { color:#71CBDC; }
+  .help    { font-family:dina,DotumChe; font-size:12px; float:right; margin-right:12px; color:#aaa; }
+  .txt     { font-family:dina,DotumChe; font-size:12px; color:#aaa; margin-right:12px; margin-left:12px; }
+
+  .update  { font-family:dina,DotumChe; font-size:15px; position:absolute; margin-left:25px; color:#FF8055; }
+  .status  { font-family:dina,DotumChe; font-size:12px; color:#FF8055; }
+  .date    { font-family:dina,DotumChe; font-size:12px; color:#21B9D5; }
+  .comment { font-family:dina,DotumChe; font-size:12px; color:#aaa; }
+
+</style>
+</head>
+
+<body>
+<!-- s:center -->
+<div id="subete">
+<div id="hidari">
+
+<!-- top navigation -->   
+<div id="shouzou">
+    <img src="images/top_img.png">
+
+    <!-- navigation buttons -->
+    <div id="navigaa">
+        <div id="toppu">
+        <a href="https://github.com/defm03"><div id="typo">@github</div></a>
+        </div>
+    </div>
+    <div id="navigab">
+        <div id="toppu">
+        <a href="mailto:defm03@outlook.jp"><div id="typo">message</div></a>
+        </div>
+    </div>
+    <div id="navigac">
+        <div id="toppu">
+        <a href="http://www.lastfm.pl/user/chie-nyan"><div id="typo">.lastfm</div></a>
+        </div>
+    </div>
+</div>
+
+<!-- content box -->
+<div id="kokoro">    
+    <!-- s:proper placement -->
+    <div id="karada">
+    <div id="atama">
+    <div id="okikaeru">
+
+    <!-- left side -->
+    <div id="daimei"><img src="images/mai_img.png"/></div>
+    <div id="yotsuba"> 
+        <div id="abtfrc">
+        <span class="tap">name:</span>          <span style="float:right;">はる</span><br>
+        <span class="tap">age:</span>           <span style="float:right;">15</span><br>
+        <span class="tap">residence:</span>     <span style="float:right;">interwebs</span><br>
+        <span class="tap">occupation:</span>    <span style="float:right;">none</span><br>
+        <span class="tap">status:</span>        <span style="float:right;">frai</span><br>
+        <span class="tap">waifu:</span>         <span style="float:right;">lain</span>
+        </div>
+    </div>
+
+    <!-- right side -->
+    <div id="migi">
+    <div id="jouhou">
+    <div id="saido">
+        
+        <span class="prompt"> defm03 > </span> 
+        <a href="index.html"><span class="cmd"> index </span></a>
+        <span class="help">:: back to front page - page index</span><br> 
+        
+        <!-- short about ver -->
+        <div id="cbipr">
+        <span class="txt">
+            <br>
+            <!-- Post-strukturalny, post-modernizm to moje drugie imie, jedno w każdym, i każde w jednym,
+            do rytmu. Programowanie, budowanie, struktury post-strukturalne, roboty i wszechświaty.
+            Naukowe afirmacje, a priori, z poważaniem. Oskarżenia o defraudacje. One mi kwiatem.
+            Magia, czary, wyższe abstrakcje.
+            <br><br>-->
+            Całe naturalne piękno, tworzone przez czynniki poznane i niepoznane, jest triumfem na
+            swój własny sposób. Lubię triumfować, dlatego też piękno to, traktuje jako obszar moich
+            podbojów. Także dzięki temu nie odczuwam odpływania mojej egzystencji; pozwala mi na 
+            samo-definicję. Naturalne piękno jest darem.
+            <br>
+        </span>
+
+        <!-- updates - feed - archive -->
+        <span class="update"><br>[<span class="cmd">λ</span>] uname -a: </span>
+        <div id="blgupd">
+            <br><br>
+            <span class="status">[!]</span><span class="date">GNU/Linux i686 </span>
+            <span class="comment"> :: 3.9.7-1-<a href="https://www.archlinux.org/">ARCH</a> #1 SMP</span>
+        </div>
+        <span class="update"><br>[<span class="cmd">λ</span>] ᗧ -Q > ᗣ.txt: </span>
+        <div id="blgupd">
+            <br><br>
+            <span class="status">[*]</span><span class="date">awesome </span>
+            <span class="comment"> :: awesome window manager </span>
+            <br> 
+            <span class="status">[*]</span><span class="date">irssi </span>
+            <span class="comment"> :: an IRC client program for Linux </span>
+            <br>
+            <span class="status">[*]</span><span class="date">mpd </span>
+            <span class="comment"> :: (<b>m</b>usic <b>p</b>layer <b>d</b>aemon) an audio player </span>
+            <br>
+            <span class="status">[*]</span><span class="date">mpdas </span>
+            <span class="comment"> :: an audioscrobbler client for mpd </span>
+            <br>
+            <span class="status">[*]</span><span class="date">ncmpcpp </span>
+            <span class="comment"> :: an mpd client with a UI </span>
+            <br>
+            <span class="status">[*]</span><span class="date">vim </span>
+            <span class="comment"> :: text editor written by bram moolenaar </span>
+            <br>
+            <span class="status">[*]</span><span class="date">ranger  </span>
+            <span class="comment"> :: text-based file manager written in Python </span>
+            <br>
+            <span class="status">[*]</span><span class="date">zsnes </span>
+            <span class="comment"> :: highly compatible super nintendo emulator </span>
+            <br>
+            <span class="status">[*]</span><span class="date">pcsx2 </span>
+            <span class="comment"> :: a sony playstation 2 emulator 
+            (<a href="https://aur.archlinux.org/packages/pcsx2-svn/">aur</a>) </span>
+            <br>
+            <span class="status">[*]</span><span class="date">dwarffortress </span>
+            <span class="comment"> :: single-player dwarfs simulator </span>
+        </div>
+        <span class="update"><br>[<span class="cmd">λ</span>] scrot: </span>
+        <div id="blgupd">
+            <br><br>
+            <span class="status">[~]</span><span class="date">2013-07-07</span>
+            <span class="comment"> :: catos.sh,vim,ncmpcpp
+            <a href="images/2013-07-09-173627_3200x1080_scrot.png">:img</a></span>
+            <br>
+            <span class="status">[~]</span><span class="date">2013-07-06</span>
+            <span class="comment"> :: screenfetch,vim,ncmpcpp,ranger
+            <a href="images/2013-07-06-204052_3200x1080_scrot.png">:img</a></span>
+            <br>
+            <span class="status">[~]</span><span class="date">2013-06-30</span>
+            <span class="comment"> :: df,ncmpcpp,irssi,firefox->4chan 
+            <a href="images/2013-06-30-170355_3200x1080_scrot.png">:img</a></span>
+            <br>
+            <span class="status">[~]</span><span class="date">2013-06-27</span>
+            <span class="comment"> :: vim,irssi,ncmpcpp,screenfetch        
+            <a href="images/2013-06-27-190912_3200x1080_scrot.png">:img</a></span>
+            <br>
+            <span class="status">[~]</span><span class="date">2013-05-24</span>
+            <span class="comment"> :: debian--vim,iceweasel,tint2,conky
+            <a href="images/screenFetch-2013-05-24_20-10-32.png">:img</a></span>
+            
+
+        </div>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- e:proper placement -->
+    </div>
+    </div>
+    </div>
+</div>
+
+<!-- e:center -->
+</div>    
+</div>
+</body>
