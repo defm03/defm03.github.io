@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Chinese Hacking</title>
+    <link href="http://lab.lepture.com/liquidluck/feed.xml" rel="self" />
+    <link href="http://lab.lepture.com/liquidluck/" />
+    <updated>2013-11-02T17:10:59+08:00</updated>
+    <id>http://lab.lepture.com/liquidluck/</id>
+    <entry>
+        <title type="html"><![CDATA[Hi there]]></title>
+        <author><name>defm03</name></author>
+        <link href="http://lab.lepture.com/liquidluck/2013/world-ends-girlfriend.html"/>
+        <published>2013-11-02T00:00:00+08:00</published>
+        <updated>2013-11-02T17:10:59+08:00</updated>
+        <id>http://lab.lepture.com/liquidluck/2013/world-ends-girlfriend.html</id>
+        <category scheme="http://lab.lepture.com/liquidluck/tag/#python" term="python" label="python" />
+        <category scheme="http://lab.lepture.com/liquidluck/tag/#public" term="public" label="public" />
+        <category scheme="http://lab.lepture.com/liquidluck/tag/#hacking" term="hacking" label="hacking" />
+        <content type="html" xml:base="http://lab.lepture.com/liquidluck/" xml:lang="en">
+            <![CDATA[ <p>Hello there. It&#39;s DEMO-chan here. Just walk on.</p>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[Hi there]]></title>
+        <author><name>defm03</name></author>
+        <link href="http://lab.lepture.com/liquidluck/2013/hello-world.html"/>
+        <published>2013-11-02T00:00:00+08:00</published>
+        <updated>2013-11-02T16:03:34+08:00</updated>
+        <id>http://lab.lepture.com/liquidluck/2013/hello-world.html</id>
+        <category scheme="http://lab.lepture.com/liquidluck/tag/#python" term="python" label="python" />
+        <category scheme="http://lab.lepture.com/liquidluck/tag/#public" term="public" label="public" />
+        <category scheme="http://lab.lepture.com/liquidluck/tag/#hacking" term="hacking" label="hacking" />
+        <content type="html" xml:base="http://lab.lepture.com/liquidluck/" xml:lang="en">
+            <![CDATA[ <p>Hello there. It&#39;s DEMO-chan here. Just walk on.</p>
+]]>
+        </content>
+    </entry>
+</feed>
