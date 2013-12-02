@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/**
+ * style.css
+ *
+ * @author 楊文里™(defm03@outlook.jp)
+ * @version 2013/12/02
+ *
+ * colors:
+ *  card-bg: #392a28
+ *  site-grandient: start:#3989e2 - end:#de93e3
+ */
+
+html,body{
+    margin:0;
+    padding:0;
+    font-family: 'Belleza', sans-serif;
+    text-align:center;
+    background-color: #282f39;
+
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: -o-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: -webkit-gradient(radial, center center, 0, center center, 505, color-stop(0, #283937), color-stop(1, #283339));
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: radial-gradient(circle farthest-corner at center, #283937 0%, #283339 100%);
+}
+
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size:48px;
+}
+
+h1:hover {
+
+}
+
+a {
+    font-color:#40585c
+}
+/*
+#radial-center{
+    background-color: #282f39;
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: -o-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: -webkit-gradient(radial, center center, 0, center center, 505, color-stop(0, #283937), color-stop(1, #283339));
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #283937 0%, #283339 100%);
+    background-image: radial-gradient(circle farthest-corner at center, #283937 0%, #283339 100%);
+}
+*/
+.Card {
+    background-color:#392a28;
+    color:#fff;
+    width:440px;
+    height:765px;
+
+    margin:auto;
+    position:absolute;
+    top:0;bottom:0;
+    left:0;right:0;
+
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+    border-radius:5%
+}
+
+#avatar {
+    width:200px;
+    height:200px;
+    background: url(https://en.gravatar.com/userimage/38109591/1915288c98b84254d441eb49316143dc.png?size=200);
+    border-radius:50%;
+    background-color:#fff;
+}
+
+#scaletrans {
+    transform: scale(0.85,0.85);
+    -ms-transform: scale(0.85,0.85); /* IE 9 */
+    -webkit-transform: scale(0.85,0.85); /* Safari and Chrome */
+}
+
+#transtrans {
+    transform: translate(0px,5px);
+    -ms-transform: translate(0px,-100px); /* IE 9 */
+    -webkit-transform: translate(0px,-90px); /* Safari and Chrome */
+}
+
+.box {
+    display: inline-block;
+    float:left;
+    height:200px;
+    overflow: hidden;
+    width:20%;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    transition: width 1s;
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+    padding: 0px;
+    min-height: 400px;
+    height: auto;
+}
+
+.box.home      { background-color: #2d89ef; }
+.box.about     { background-color: #00a300; }
+.box.portfolio { background-color: #e3a21a; }
+.box.services  { background-color: #9f00a7; }
+.box.contact   { background-color: #ee1111; }
+
+.box a
+{
+    color:#FFF;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    height:100%;
+    display:block;
+    padding-top: 20px;
+}
+
+.box span
+{
+    display:block;
+    position:relative;
+    top:90%;
+    text-align: center;
+
+    -webkit-transition: top 1s;
+    -moz-transition: top 1s;
+    transition: top 1s;
+}
+
+.nav:hover .box { width:10%; }
+
+.nav .box:hover { width: 60%; }
+
+.box:hover span{ top:25%; }
+
+#foot {
+top:200px;
+}
